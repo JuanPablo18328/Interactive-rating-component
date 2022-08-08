@@ -1,13 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Overpass:wght@400;700&family=Red+Hat+Text:wght@700&display=swap');
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Overpass', sans-serif;
+  background: var(--veryDarkBlue);
+  font-size: 16px;
+  margin: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 0.1px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  background: linear-gradient(120deg, var(--darkBlue), var(--veryDarkBlue));
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+}
+
+.btn-rating {
+  background: var(--orange);
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-rating:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.btn-number:hover {
+  background-color: var(--orange);
+}
+
+.p-rating {
+  color: var(--orange);
+}
+
+@media (min-width: 500px){
+  .wrapper {
+    width: 400px;
+  }
 }
